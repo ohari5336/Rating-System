@@ -32,7 +32,11 @@ class rating_system {
 			die("There is a problem withe the db file !");
 	}
 	
-	
+	/**
+	* show_rating() - this will show the rating
+	* @param $item - the item on witch you want to show the rating
+	* @param $return - return or echo the data
+	*/
 	function show_rating($item, $return = 0){
 		// we grab the data from the file
 		$data = $this->grab_data();
@@ -132,29 +136,3 @@ class rating_system {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
