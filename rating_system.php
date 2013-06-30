@@ -119,6 +119,21 @@ class rating_system {
 		<input type='submit' value='vote'>
 		<input type='hidden' name='item' value='$item'>
 		</form>";
+		
+        // we grab the data from the file
+		$data = $this->grab_data();
+
+        $voted = 0;
+        // check if this person voted before on this item
+        foreach($data as $d) {
+            if($this->unique == $d[0] && $item == $d[1])
+            $voted = 1;
+        }
+        
+        if($voted)
+            $html = "";
+
+
 		if($return)
 			return $html;
 		else
